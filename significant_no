@@ -1,0 +1,10 @@
+num=float(input())
+num1=num
+while num%1>0:
+    num1=num*10
+num1=int(num1)
+c=0
+while num1>1:
+    c=c+1
+    num1=num1//10
+print(c)

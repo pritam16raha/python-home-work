@@ -1,0 +1,49 @@
+'''
+def factorial(number):
+    if number == 1:
+        return 1
+    else:
+        return(number * factorial(number - 1))
+number = int(input())
+print("Factorial of", number, "is: ", factorial(number))
+
+def tab_rec_fun(n, i):
+    if(i>10):
+        return
+    print(n, "*", i, "=", n*i)
+    return tab_rec_fun(n, i+1)
+
+print("Enter the Number: ")
+num = int(input())
+print("\nTable of", num, "is:")
+tab_rec_fun(num,1)
+
+def gcd(a, b):
+   if a == b:
+      return a
+   elif a < b:
+      return gcd(b, a)
+   else:
+      return gcd(b, a - b)
+
+a = int(input("type a \n"))
+b = int(input("type b \n"))
+print(gcd(a, b))
+'''
+# Python program to display the Fibonacci sequence
+
+def recur_fibo(n):
+   if n <= 1:
+       return n
+   else:
+       return(recur_fibo(n-1) + recur_fibo(n-2))
+
+nterms = int(input("range"))
+
+# check if the number of terms is valid
+if nterms <= 0:
+   print("Plese enter a positive integer")
+else:
+   print("Fibonacci sequence:")
+   for i in range(nterms):
+       print(recur_fibo(i))

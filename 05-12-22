@@ -47,3 +47,108 @@ else:
    print("Fibonacci sequence:")
    for i in range(nterms):
        print(recur_fibo(i))
+
+11/12/2022
+'''
+def factorial(number):
+    if number == 1:
+        return 1
+    else:
+        return(number * factorial(number - 1))
+number = int(input())
+print("Factorial of", number, "is: ", factorial(number))
+
+def mul_fun(n,i):
+    if(i>10):
+        return
+    print(n, "*", i, "=", n*i)
+    return mul_fun(n, i+1)
+
+print("Enter the Number: ")
+num = int(input())
+print(mul_fun(num,1))
+#mul_fun(num,1)
+
+
+def gcd(a, b):
+   if a == b:
+      return a
+   elif a < b:
+      return gcd(b, a)
+   else:
+      return gcd(b, a - b)
+
+a = int(input("type a \n"))
+b = int(input("type b \n"))
+print(gcd(a, b))
+
+
+def rec_fibo(n):
+   if n <= 1:
+       return n
+   else:
+       return(rec_fibo(n-1) + rec_fibo(n-2))
+
+nterms = int(input("range :"))
+
+if nterms <= 0:
+   print("Plese enter a Z+ ")
+else:
+   print("Fibonacci ")
+   for i in range(nterms):
+       print(rec_fibo(i))
+
+
+def rec_fibo(n):
+   if n <= 1:
+       return n
+   else:
+       return(rec_fibo(n-1) + rec_fibo(n-2))
+
+#nterms = int(input("range :"))
+n=100
+if n <= 0:
+   print("Plese enter a Z+ ")
+else:
+   
+#print("Fibonacci ")
+for i in range(n):
+    print(rec_fibo(i))
+
+ll=[1,2,3,4,5,6,7,8,9,10]
+def Sum(ll):
+    if len(ll)==0:
+        return 0
+    else:
+        return ll[0] + Sum(ll[1:]) 
+print (Sum(ll))
+
+
+
+#ll=[]
+ll1 = input("type the word \n")
+ll2 = list(ll1)
+# 👇️ ['h', 'e', 'l', 'l', 'o']
+#print(ll2)
+#ll=['A','B','C','D','E','F','G']
+def recursive(ll2):
+    if len(ll2) == 1:       
+        return ll2 #base case
+    else:
+        return recursive(ll2[1:]) + [ll2[0]]
+print (recursive(ll2))
+
+'''
+l1=['a','b','c']
+l2=[1, 2, 3, 4, 5]
+new=[]
+def combine(l1,l2):
+    if(len(l1)!=0):
+        for i in range(len(l1)):
+            new.append(l1[i])
+            new.append(l2[i])
+        else:
+            for i in range(len(l2)):
+                new.append(l2[i])
+    return new
+print(combine(l1,l2)) 

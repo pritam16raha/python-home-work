@@ -152,3 +152,34 @@ def combine(l1,l2):
                 new.append(l2[i])
     return new
 print(combine(l1,l2)) 
+
+
+def alter(l1, l2):
+    ll = []
+    if(len(l1) == 0 and len(l2) == 0):
+        return ll
+    
+    if(len(l1) != 0):
+        ll.append(l1[0])
+    if(len(l2) != 0):
+        ll.append(l2[len(l2)-1])
+        
+    return ll + alter(l1[1:], l2[:len(l2)-1])
+    
+l1 = []
+n = int(input("Enter number of elements for l1:" ))
+for i in range(0, n):
+    ele = input("insert string elements for l1 \n") 
+    l1.append(ele)      
+
+
+l2 = []
+n = int(input("Enter number of elements for l2 :"))
+for j in range(0, n):
+    ele = int(input("insert intiger elements for l2 \n")) 
+    l2.append(ele)      
+
+
+print(l1)
+print(l2)
+print(alter(l1, l2))

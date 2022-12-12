@@ -128,7 +128,7 @@ print (Sum(ll))
 #ll=[]
 ll1 = input("type the word \n")
 ll2 = list(ll1)
-# 👇️ ['h', 'e', 'l', 'l', 'o']
+#  ['h', 'e', 'l', 'l', 'o']
 #print(ll2)
 #ll=['A','B','C','D','E','F','G']
 def recursive(ll2):

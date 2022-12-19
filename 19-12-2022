@@ -1,0 +1,57 @@
+'''
+# Python code to create a file
+file = open('geek.txt','w')
+file.write("This is the write command")
+file.write("It allows us to write in a particular file")
+file.close()
+
+# Python code to illustrate with() alongwith write()
+with open("pritam.txt", "w") as f:
+	f.write("good morning pritam")
+file= open ('pritam.txt','r')
+for i in file:
+    print(i)
+#file = open('pritam.txt','r')    
+#file.write("This is the write command")
+
+#class 19/12/2022
+
+file= open ('pritam.txt','r')
+str=file.read()
+print(str)
+file.close()
+
+
+#with open("pritam.txt", "w") as f:
+#f.write("good morning pritam \n currently doing mca")
+file= open ('pritam.txt','r')
+#str=file.read(10)
+#print(str)
+#print(file.read())
+#file.close()
+#str=file.readline(10)
+#print(str)
+#print(file.readline(2))
+#print(file.readline(2))
+#print(file.readlines(2))
+ll=file.readline()
+print(ll)
+for i in ll:
+    print(i)
+file.close()
+
+'''
+with open("pritam.txt", "w") as file:
+    file.write("good morning pritam currently doing mca ")
+file= open ('pritam.txt','r+')
+text=file.readlines()
+file.close()
+file2= open('pritam2.txt','w')
+for i in text:
+    file2.write(i)
+file2.read(10)
+file2.close()
+
+
+#write a python function that will copy a file to another.
+

@@ -1,0 +1,129 @@
+'''
+#1 program
+class MCAstudents:
+    course="MCA"
+    def __init__(a,N):
+        a.name=N #it is public, it can be changed outside the class defination
+    def display(self):
+        print(self.name)
+        print(MCAstudents.course) #to access the class veriable
+stud1=MCAstudents("pritam")
+stud1.display()
+stud1.name="pritam raha"
+stud1.display()
+
+class MCAstudents:
+    course="MCA"
+    def __init__(a,N,A):
+        a.name=N #it is public, it can be changed outside the class defination
+        a.__age=A
+    def display(self):
+        print(self.name)
+        print(MCAstudents.course) #to access the class veriable
+    def __str__(self):
+        ss="course= "+str(MCAstudents.course)+"\n name= "+str(self.name)+"\n Age = "+str(self.__age)
+        return ss
+stud1=MCAstudents("pritam",25)
+stud1.display()
+stud1.name="pritam raha"
+stud1.display()
+print(stud1)
+
+
+class MCAstudents:
+    course="MCA"
+    def __init__(a,N,A):
+        a.name=N #it is public, it can be changed outside the class defination
+    
+    def display(self):
+        print(self.name)
+        print(MCAstudents.course) #to access the class veriable
+    def __str__(self):
+        ss="course= "+str(MCAstudents.course)+"\n name= "+str(self.name)+"\n Age = "+str(self.__age)
+        return ss
+stud1=MCAstudents("pritam",25)
+stud1.display()
+stud1.name="pritam raha"
+stud1.display()
+print(stud1)
+
+
+#string representation of an object
+#print(vev)
+#print(stud1)
+#with in the class definition
+def __str__(self):
+    ss="course= "+str(MCAstudents.course)+"\n name= "+str(self.name)+"\n Age = "+str(self.__age)
+    return ss
+course= MCA
+name= PRITAM
+age=20
+
+#2
+class MCAstudents:
+    course="MCA"
+    def __init__(a,N,A):
+        a.name=N #it is public, it can be changed outside the class defination
+        a.__age=A
+    def display(self):
+        print(self.name)
+        print(MCAstudents.course) #to access the class veriable
+    def __str__(self):
+        ss="course= "+str(MCAstudents.course)+"\n name= "+str(self.name)+"\n Age = "+str(self.__age)
+        return ss
+stud1=MCAstudents("pritam",25)
+stud1.display()
+stud1.name="pritam raha"
+stud1.display()
+print(stud1)#to call the fucntion only
+
+#3 program
+#fraction number defination (number should not be zero)
+#fractio class
+class Fraction:
+    def __init__(S,N,D=1):
+        S.Num=N
+        S.Denom=D
+    def __str__(self):
+        return str(self.Num)+"/"+str(self.Denom)
+
+frac1=Fraction(2,5)
+frac2=Fraction(4)
+print(frac1)
+print(frac2)
+
+'''
+#operator overloading
+#frac1=Fraction(2,5)
+#frac2=Fraction (4)
+#print(frac1+frac2)
+#design a class accordingly
+#here we have to define str function to be added together ex: print(2+5) and the additive value will get printed
+#whenever two fraction object added together (2/5)+(4/1)= ((2*1)+(4*5))/(5*1)
+#left hand operand send as instance, and right hand operand send as argument whenever it is called
+
+#define gcd function
+class Fraction:
+    def __add__(s,right_hand_operand):
+        d=s.denom*right_hand_operand.denom
+        n=s.num*right_hand_operand.denom+s.denom*right_hand_operand.num
+        a= gcd(n,d)
+        n=n//a
+        d=d//a
+        return Fraction(n,d)#nameless temporary object in c++
+frac1=Fraction(2,5)
+print(frac1)
+
+
+#multiplication operator
+
++= __iadd__
+-=
+*=
+/= __truediv__
+#distance class(ft,inch) and (meter, cm)
+#complex class
+    #1. real complexe number
+    #2. imaginary complexe number
+#+,-,*,/
+#+=, -=, *=, /=
